@@ -1,4 +1,4 @@
-package com.example.kittynotes.retrofit
+package com.example.kittynotes.domain.retrofit
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -20,7 +20,7 @@ class ServiceBuilder {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    fun getApi(): Api{
+    fun getApi(): Api {
         interceptor.level = HttpLoggingInterceptor.Level.BODY
         val api = retrofit.create(Api::class.java)
         return api

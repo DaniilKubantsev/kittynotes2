@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.RegistrationFragment"
-    android:textColorHint="@color/red">
+    android:id="@+id/sing_in_fragment">
 
-    <!-- TODO: Update blank fragment layout -->
+
+
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
@@ -29,42 +31,52 @@
 
 
         <EditText
-            android:id="@+id/email_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:hint="Email" />
-        <EditText
             android:id="@+id/username_edit_text"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:hint="Username"/>
+
         <EditText
             android:id="@+id/password_edit_text"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:hint="Password"/>
-        <EditText
-            android:id="@+id/repeat_password_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:hint="Repeat password"/>
 
-        <TextView
-            android:id = "@+id/to_sing_in"
-            android:layout_width="match_parent"
+
+        <LinearLayout
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Already have account?"
-            android:onClick="toSingInPage"/>
+            android:orientation="horizontal"
+            android:paddingHorizontal="30px"
+            android:weightSum="2"
+            tools:ignore="MissingConstraints">
 
+            <TextView
+                android:id="@+id/to_registration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="toRegistrationPage"
+                android:text="Don't have account?" />
+
+            <TextView
+                android:id="@+id/to_email_sing_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="toLogInByEmailPage"
+                android:text="Log in by email" />
+
+        </LinearLayout>
 
         <Button
-            android:id="@+id/regitration_button"
+            android:id="@+id/sign_in_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
             android:background="#000000"
-            android:onClick="onRegistrationClick"
-            android:text="Registration" />
+            android:onClick="onSignInClick"
+            android:text="sing in" />
 
 
     </LinearLayout>

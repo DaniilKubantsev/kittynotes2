@@ -1,4 +1,4 @@
-package com.example.kittynotes.Domain.dto
+package com.example.kittynotes.domain.dto
 
 data class AuthRequest(
     val email: String?,
