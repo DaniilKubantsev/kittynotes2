@@ -1,6 +1,6 @@
 package com.example.kittynotes.domain.useCase
 
-import com.example.kittynotes.domain.dto.AuthRequest
+import com.example.kittynotes.domain.dto.requests.RegistrationRequest
 import com.example.kittynotes.domain.dto.responses.JwtResponse
 import com.example.kittynotes.domain.exceptions.BadRequestException
 import com.example.kittynotes.domain.retrofit.ApiService
@@ -16,7 +16,7 @@ class UsernameSingInUseCase {
             Validator.isValidPassword(password = password)
         ){
             //формирование запроса
-            val authorisationRequest = AuthRequest("", username, password)
+            val authorisationRequest = RegistrationRequest("", username, password)
             val result = ApiService.authorisation(authorisationRequest)
             return result
         }

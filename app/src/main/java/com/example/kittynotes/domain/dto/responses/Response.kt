@@ -1,3 +1,3 @@
 package com.example.kittynotes.domain.dto.responses
 
-interface Response
+abstract class Response(private val type: String?)

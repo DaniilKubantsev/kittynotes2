@@ -1,5 +1,3 @@
 package com.example.kittynotes.domain.dto.responses
 
-class MessageResponse(val message: String?): AbstractResponse(message){
-//    fun getMessage(): String? = message
-}
+class MessageResponse(private val type: String?, private val message: String?): Response(type)
